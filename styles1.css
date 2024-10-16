@@ -1,0 +1,282 @@
+/* Reset CSS untuk merapikan tampilan di semua browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #34495e;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    margin: 0 10px;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #e74c3c;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Styling untuk struktur organisasi */
+#struktur-organisasi {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    margin-top: 40px;
+}
+
+#struktur-organisasi h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e74c3c;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.org-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.leader {
+    margin-bottom: 40px;
+}
+
+.leader img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.leader h3 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+.leader p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+.other-members {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.member h4 {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+.member p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+/* Styling untuk Komisi A, B, dan C */
+.commissions {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.commissions h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 10px;
+}
+
+.commissions .member {
+    display: inline-block;
+    width: 180px;
+    margin: 15px 20px;
+    text-align: center;
+}
+
+.commissions img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.commissions h4 {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+.commissions p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    main {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .other-members {
+        flex-direction: column;
+    }
+
+    .commissions .member {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Animasi untuk hover */
+a {
+    position: relative;
+    overflow: hidden;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s;
+}
+
+a:hover::before {
+    left: 0;
+}
+
+nav a:hover, .dropdown-content a:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
